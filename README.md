@@ -5,6 +5,10 @@ A modern chat application built with **Next.js**, featuring WhatsApp-style taggi
 ## Screenshot of the App
 <img width="3195" height="1641" alt="image" src="https://github.com/user-attachments/assets/7472f4b3-3a22-42c6-9809-2d81f6c299d1" />
 
+
+## Demo 
+https://github.com/user-attachments/assets/cb90f199-012d-4ec6-8c51-0aa795ba60a7
+
 ## Getting Started
 
 First, run the development server:
