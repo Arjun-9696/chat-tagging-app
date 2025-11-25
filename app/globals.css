@@ -1,26 +1,91 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f1f1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.18s ease-out;
+}
+.tag-bubble {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: #cfe1ff;
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.suggestion-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+  max-height: 200px;
+  overflow: auto;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.tag-bubble {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0 4px;
+  display: inline-flex;
+  align-items: center;
+}
+.tag-inline { 
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0 4px;
+}
+.tag-at { background: #E0F0FF; color: #cfe1ff; border: 1px solid #cfe1ff; }
+.tag-hash { background: #FFF5CC; color: #7A4E00; border: 1px solid #FFD466; }
+
+.tag-bubble.tag-inline {
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.mention-tag {
+  background: #cfe1ff;
+  color: #1d4ed8;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.hashtag-tag {
+  background: #ccf8d5;
+  color: #047857;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+@keyframes suggestionPopup {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-suggestionPopup {
+  animation: suggestionPopup 0.15s ease-out;
+}
+textarea::placeholder {
+  -webkit-text-fill-color: #9ca3af !important; /* Tailwind gray-400 */
+  color: #9ca3af !important;
+  opacity: 1 !important;
 }

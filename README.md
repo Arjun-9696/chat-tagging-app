@@ -1,10 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# WhatsApp-Style Chat App — Tagging + Dynamic Autocomplete  
+A modern chat application built with **Next.js**, featuring WhatsApp-style tagging, dynamic autocomplete suggestions from a backend API, highlighted inline tags, full-tag deletion on backspace, and message handling via Redux.
+
+---
+## Steps:
+1. User types inside textarea  
+2. Detect trigger character (@/#)  
+3. Extract query for autocomplete  
+4. Fetch suggestions from backend  
+5. Show dropdown  
+6. Insert tag on selection  
+7. Highlight tags in overlay  
+8. Delete entire tag on backspace  
+9. Submit message and store in Redux
+
+## 🚀 Features
+
+### 🔹 **1. WhatsApp-Style Tagging**
+- Supports `@` (users) and `#` (topics)
+- Autocomplete appears instantly when typing (`@ma`, `#su`, etc.)
+- Tag is inserted into the input when selected
+- Tags are visually highlighted (colored chips) in the message display
+
+### 🔹 **2. Dynamic Autocomplete (Backend Powered)**
+- Backend API (`/api/tags?q=value`) returns filtered suggestions
+- Suggestions update in real-time as user types
+- Mock database is easily expandable
+
+### 🔹 **3. Full Tag Deletion**
+- Pressing Backspace removes the **entire tag**, not one character
+- Exact WhatsApp behavior
+
+### 🔹 **4. Overlay-Based Text Highlighting**
+- Textarea uses transparent text
+- Highlighted HTML overlay displays the tags visually
+- Caret remains accurate, does not shift or drift
+
+### 🔹 **5. Redux-Based Chat Storage**
+- All chats stored centrally using Redux Toolkit
+- Clean state management
+
+### 🔹 **6. API Endpoint**
+ - `/api/tags`
+ - [ "Mallikarjun", "Manager", "Marketing" ]
+
+---
+
+## 🏗 Tech Stack
+
+| Layer        | Technology |
+|--------------|------------|
+| Frontend     | React, Next.js 14+ App Router |
+| Styling      | Tailwind CSS |
+| State Mgmt   | Redux Toolkit |
+| Backend API  | Next.js Route Handlers |
+| Language     | TypeScript |
+
+---
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install 
+# or
+npm i 
+# and
 npm run dev
 # or
 yarn dev
@@ -15,22 +76,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
