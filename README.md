@@ -2,6 +2,41 @@
 # WhatsApp-Style Chat App — Tagging + Dynamic Autocomplete  
 A modern chat application built with **Next.js**, featuring WhatsApp-style tagging, dynamic autocomplete suggestions from a backend API, highlighted inline tags, full-tag deletion on backspace, and message handling via Redux.
 
+## Screenshot of the App
+<img width="3195" height="1641" alt="image" src="https://github.com/user-attachments/assets/7472f4b3-3a22-42c6-9809-2d81f6c299d1" />
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm install 
+# or
+npm i 
+# and
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## 🏗 Tech Stack
+
+| Layer        | Technology |
+|--------------|------------|
+| Frontend     | React, Next.js 14+ App Router |
+| Styling      | Tailwind CSS |
+| State Mgmt   | Redux Toolkit |
+| Backend API  | Next.js Route Handlers |
+| Language     | TypeScript |
+
 ---
 ## Steps:
 1. User types inside textarea  
@@ -46,33 +81,5 @@ A modern chat application built with **Next.js**, featuring WhatsApp-style taggi
 
 ---
 
-## 🏗 Tech Stack
 
-| Layer        | Technology |
-|--------------|------------|
-| Frontend     | React, Next.js 14+ App Router |
-| Styling      | Tailwind CSS |
-| State Mgmt   | Redux Toolkit |
-| Backend API  | Next.js Route Handlers |
-| Language     | TypeScript |
 
----
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm install 
-# or
-npm i 
-# and
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
